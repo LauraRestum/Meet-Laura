@@ -23,6 +23,8 @@ html,body{margin:0;height:100%;overflow:hidden;background:#1d0840;font-family:"M
 .photo img{width:100%;height:100%;object-fit:cover;display:block;border-radius:28px}
 .active .photo{animation:pop .95s cubic-bezier(.34,1.56,.64,1) both;animation-delay:calc(var(--i)*150ms + 200ms)}
 @keyframes pop{from{opacity:0;transform:translateY(90px) scale(.55) rotate(calc(var(--r) - 14deg))}to{opacity:1;transform:rotate(var(--r))}}
+.active .photo.step{animation:none;opacity:0}
+.active .photo.step.shown{animation:pop .95s cubic-bezier(.34,1.56,.64,1) both;animation-delay:0s}
 .opener.active .photo{animation:popbig 1.2s cubic-bezier(.34,1.56,.64,1) .2s both,floaty 6s ease-in-out 1.4s infinite}
 @keyframes popbig{from{opacity:0;transform:scale(.3) rotate(-20deg)}to{opacity:1;transform:rotate(0)}}
 @keyframes floaty{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(1deg)}}
@@ -52,7 +54,7 @@ html,body{margin:0;height:100%;overflow:hidden;background:#1d0840;font-family:"M
 .missing video{display:none}.missing .novideo{display:block}
 #hint{position:fixed;right:16px;bottom:12px;font-size:13px;opacity:.0;transition:opacity .4s}
 body:hover #hint{opacity:.45}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.photo,.bullets li,.state,.statename{opacity:1!important}.arrow{clip-path:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.photo:not(.step),.step.shown,.bullets li,.state,.statename{opacity:1!important}.arrow{clip-path:none}}
 </style></head>
 <body><div id="stage"><div class="glow g1"></div><div class="glow g2"></div><div class="spark" style="left:1780px;top:90px;animation-delay:0s"></div><div class="spark" style="left:120px;top:70px;animation-delay:1.4s"></div><div class="spark" style="left:1840px;top:980px;animation-delay:2.6s"></div><div class="spark" style="left:980px;top:40px;animation-delay:3.3s"></div><div class="spark" style="left:60px;top:1000px;animation-delay:0.8s"></div><div class="spark" style="left:1500px;top:520px;animation-delay:2.1s"></div>
 <section class="slide opener" data-n="1">
@@ -64,10 +66,10 @@ body:hover #hint{opacity:.45}
 <ul class="bullets " style="left:880px;top:440px;font-size:40px;--gap:64px"><li style="--j:0">5'7"</li><li style="--j:1">Weight: undisclosed</li><li style="--j:2">Libra</li><li style="--j:3">Born in Saginaw, Michigan</li><li style="--j:4">Lebanese and Hungarian roots</li><li style="--j:5">Andover High School, 2016</li><li style="--j:6">Wichita State University, 2020</li></ul>
 </section>
 <section class="slide " data-n="3">
-<figure class="photo" style="left:102px;top:56px;width:345px;height:460px;--r:-1.58deg;--i:0"><img src="images/img03.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:525px;top:56px;width:621px;height:460px;--r:-2.38deg;--i:1"><img src="images/img04.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:1224px;top:56px;width:565px;height:460px;--r:-0.62deg;--i:2"><img src="images/img05.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:624px;top:571px;width:644px;height:430px;--r:-2.07deg;--i:3"><img src="images/img06.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:80px;top:70px;width:700px;height:940px;--r:-1.20deg;--i:0"><img src="images/img03.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:840px;top:70px;width:520px;height:420px;--r:-2.00deg;--i:1"><img src="images/img04.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:1420px;top:70px;width:400px;height:420px;--r:1.00deg;--i:2"><img src="images/img05.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:840px;top:560px;width:980px;height:450px;--r:-1.50deg;--i:3"><img src="images/img06.jpg" alt="" style=""></figure>
 </section>
 <section class="slide " data-n="4">
 <figure class="photo" style="left:142px;top:86px;width:396px;height:880px;--r:-2.60deg;--i:0"><img src="images/img07.jpg" alt="" style=""></figure>
@@ -85,42 +87,42 @@ body:hover #hint{opacity:.45}
 <div class="arrow" style="left:1119px;top:480px;width:110px;--i:3"></div>
 </section>
 <section class="slide " data-n="6">
-<figure class="photo" style="left:263px;top:56px;width:293px;height:440px;--r:1.80deg;--i:0"><img src="images/img10.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:634px;top:56px;width:586px;height:440px;--r:1.59deg;--i:1"><img src="images/img11.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:1298px;top:56px;width:330px;height:440px;--r:-1.67deg;--i:2"><img src="images/img12.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:603px;top:571px;width:286px;height:430px;--r:0.22deg;--i:3"><img src="images/img13.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:967px;top:571px;width:322px;height:430px;--r:-1.34deg;--i:4"><img src="images/img14.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:214px;top:40px;width:320px;height:480px;--r:1.80deg;--i:0"><img src="images/img10.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:606px;top:40px;width:640px;height:480px;--r:1.59deg;--i:1"><img src="images/img11.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:1318px;top:40px;width:360px;height:480px;--r:-1.67deg;--i:2"><img src="images/img12.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:580px;top:584px;width:300px;height:450px;--r:0.22deg;--i:3"><img src="images/img13.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:968px;top:584px;width:338px;height:450px;--r:-1.34deg;--i:4"><img src="images/img14.jpg" alt="" style=""></figure>
 </section>
 <section class="slide " data-n="7">
 <h2 class="title" style="left:140px;top:80px">Fun facts</h2>
-<figure class="photo" style="left:75px;top:326px;width:420px;height:560px;--r:-1.96deg;--i:0"><img src="images/img15.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:573px;top:326px;width:746px;height:560px;--r:-2.36deg;--i:1"><img src="images/img16.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:1397px;top:326px;width:420px;height:560px;--r:-1.71deg;--i:2"><img src="images/img17.jpg" alt="" style=""></figure>
+<figure class="photo step" style="left:56px;top:260px;width:435px;height:580px;--r:-1.96deg;--i:0"><img src="images/img15.jpg" alt="" style=""></figure>
+<figure class="photo step" style="left:559px;top:260px;width:773px;height:580px;--r:-2.36deg;--i:0"><img src="images/img16.jpg" alt="" style=""></figure>
+<figure class="photo step" style="left:1400px;top:260px;width:435px;height:580px;--r:-1.71deg;--i:0"><img src="images/img17.jpg" alt="" style=""></figure>
 </section>
 <section class="slide " data-n="8">
 <h2 class="title" style="left:140px;top:160px">Special interests</h2>
-<ul class="bullets big" style="left:140px;top:330px;font-size:54px;--gap:100px"><li style="--j:0">World history</li><li style="--j:1">World War II</li><li style="--j:2">The Tudor dynasty</li></ul>
-<figure class="photo" style="left:790px;top:366px;width:293px;height:440px;--r:2.56deg;--i:0"><img src="images/img18.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:1147px;top:366px;width:311px;height:440px;--r:1.97deg;--i:1"><img src="images/img19.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:1522px;top:366px;width:330px;height:440px;--r:1.84deg;--i:2"><img src="images/img20.jpg" alt="" style=""></figure>
+<ul class="bullets big" style="left:140px;top:330px;font-size:50px;--gap:96px"><li style="--j:0">World history</li><li style="--j:1">World War II</li><li style="--j:2">The Tudor dynasty</li></ul>
+<figure class="photo" style="left:735px;top:330px;width:320px;height:480px;--r:2.56deg;--i:0"><img src="images/img18.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:1113px;top:330px;width:339px;height:480px;--r:1.97deg;--i:1"><img src="images/img19.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:1510px;top:330px;width:360px;height:480px;--r:1.84deg;--i:2"><img src="images/img20.jpg" alt="" style=""></figure>
 </section>
 <section class="slide " data-n="9">
 <h2 class="title" style="left:140px;top:60px">Hobby hopping</h2>
-<figure class="photo" style="left:283px;top:226px;width:202px;height:360px;--r:1.80deg;--i:0"><img src="images/img21.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:563px;top:226px;width:697px;height:360px;--r:-1.84deg;--i:1"><img src="images/img22.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:1338px;top:226px;width:270px;height:360px;--r:-1.14deg;--i:2"><img src="images/img23.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:245px;top:636px;width:475px;height:360px;--r:0.76deg;--i:3"><img src="images/img24.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:798px;top:636px;width:182px;height:360px;--r:1.39deg;--i:4"><img src="images/img25.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:1058px;top:636px;width:270px;height:360px;--r:2.13deg;--i:5"><img src="images/img26.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:1406px;top:636px;width:240px;height:360px;--r:2.28deg;--i:6"><img src="images/img27.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:236px;top:185px;width:222px;height:395px;--r:1.80deg;--i:0"><img src="images/img21.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:526px;top:185px;width:765px;height:395px;--r:-1.84deg;--i:1"><img src="images/img22.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:1359px;top:185px;width:296px;height:395px;--r:-1.14deg;--i:2"><img src="images/img23.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:220px;top:645px;width:508px;height:385px;--r:0.76deg;--i:3"><img src="images/img24.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:796px;top:645px;width:195px;height:385px;--r:1.39deg;--i:4"><img src="images/img25.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:1059px;top:645px;width:289px;height:385px;--r:2.13deg;--i:5"><img src="images/img26.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:1416px;top:645px;width:257px;height:385px;--r:2.28deg;--i:6"><img src="images/img27.jpg" alt="" style=""></figure>
 </section>
 <section class="slide " data-n="10">
-<figure class="photo" style="left:449px;top:51px;width:247px;height:440px;--r:-2.48deg;--i:0"><img src="images/img28.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:784px;top:51px;width:324px;height:440px;--r:0.64deg;--i:1"><img src="images/img29.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:1196px;top:51px;width:247px;height:440px;--r:1.03deg;--i:2"><img src="images/img30.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:425px;top:566px;width:315px;height:420px;--r:0.04deg;--i:3"><img src="images/img31.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:828px;top:566px;width:315px;height:420px;--r:-1.93deg;--i:4"><img src="images/img32.jpg" alt="" style=""></figure>
-<figure class="photo" style="left:1231px;top:566px;width:236px;height:420px;--r:-0.16deg;--i:5"><img src="images/img33.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:437px;top:40px;width:264px;height:470px;--r:-2.48deg;--i:0"><img src="images/img28.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:773px;top:40px;width:346px;height:470px;--r:0.64deg;--i:1"><img src="images/img29.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:1191px;top:40px;width:264px;height:470px;--r:1.03deg;--i:2"><img src="images/img30.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:400px;top:578px;width:345px;height:460px;--r:0.04deg;--i:3"><img src="images/img31.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:817px;top:578px;width:345px;height:460px;--r:-1.93deg;--i:4"><img src="images/img32.jpg" alt="" style=""></figure>
+<figure class="photo" style="left:1234px;top:578px;width:259px;height:460px;--r:-0.16deg;--i:5"><img src="images/img33.jpg" alt="" style=""></figure>
 </section>
 <section class="slide videoslide" data-n="11">
 <div class="videowrap"><video id="vid" src="video/video.mp4" controls playsinline preload="metadata"></video><p class="novideo">Video coming soon</p></div>
@@ -131,8 +133,12 @@ const slides=[...document.querySelectorAll('.slide')],stage=document.getElementB
 let cur=0;
 function fit(){const s=Math.min(innerWidth/1920,innerHeight/1080);stage.style.transform=`translate(-50%,-50%) scale(${s})`}
 addEventListener('resize',fit);fit();
-function go(n){n=Math.max(0,Math.min(slides.length-1,n));if(n===cur&&slides[n].classList.contains('active'))return;
- slides[cur].classList.remove('active');cur=n;void slides[cur].offsetWidth;slides[cur].classList.add('active');
+function steps(){return [...slides[cur].querySelectorAll('.step')]}
+function go(n){
+ if(n===cur+1){const s=steps().find(el=>!el.classList.contains('shown'));if(s){s.classList.add('shown');return}}
+ if(n===cur-1){const shown=steps().filter(el=>el.classList.contains('shown'));if(shown.length){shown[shown.length-1].classList.remove('shown');return}}
+ n=Math.max(0,Math.min(slides.length-1,n));if(n===cur&&slides[n].classList.contains('active'))return;
+ slides[cur].classList.remove('active');steps().forEach(el=>el.classList.remove('shown'));cur=n;void slides[cur].offsetWidth;slides[cur].classList.add('active');
  if(vid){if(slides[cur].contains(vid)){vid.currentTime=0;vid.play().catch(()=>{})}else vid.pause()}
  history.replaceState(null,'','#'+(cur+1))}
 addEventListener('keydown',e=>{
